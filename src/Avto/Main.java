@@ -25,7 +25,7 @@ public class Main {
         Scanner in = new Scanner(System.in);        //инициализация сканера
         do
 	{
-            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Конструкторы\n7) Возврат значения через вспомогательный класс\n8) String\n\n0) - выход");
+            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Конструкторы\n7) Инициализация массива через конструктор с одним параметром\n8) String\n\n0) - выход");
             main_key = in1.nextInt();
             switch (main_key) {
                 case 1:
@@ -189,6 +189,15 @@ public class Main {
                     break;
                 case 7:
                     key = 9;
+                    Koleso [] Kol_mass = new Koleso[3];
+                    for (int i = 0;i < 3; i++)
+                    {
+                        Kol_mass[i] = new Koleso(12);
+                        System.out.println("\n");
+                        Kol_mass[i].prosmotr_koleso();
+                    }
+                    
+                    /*
                     Help schet = new Help();
                     Motor Mot1 = new Motor();
                     Motor Mot2 = new Motor();
@@ -196,6 +205,7 @@ public class Main {
                     System.out.println("Количество лошадей в двигателе №1: " + schet.vsego);    
                     Mot2.vsego_koni(schet);
                     System.out.println("Количество лошадей в двигателях (№1 + №2): " + schet.vsego + "\n\n\n\n");    
+                    */
                     break;
                 case 8:
                     key = 9;
